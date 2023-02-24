@@ -32,15 +32,15 @@ const App = () => {
         </div>
       ) : (
         <>
-          <div className='row justify-content-between text-white mb-2 me-2'>
-            <div className=' w-50'>
-              <span className='ms-5 exFont'>Currency</span>
+          <div className='row justify-content-between text-white m-2 no-wrap me-2'>
+            <div className='col-6 exFont'>
+              Currency
               {/* <span></span> */}
             </div>
 
-            <div className='col exFont'>24hVolume</div>
-            <div className='col exFont'>numberOfMarkets</div>
-            <div className='col exFont'>marketShare</div>
+            <div className='col-2 exFont'>24hVolume</div>
+            <div className='col-2 exFont'>Markets</div>
+            <div className='col-2 exFont'>marketShare</div>
           </div>
           {exchanges?.map((exchange) => (
             <Collapse
@@ -77,7 +77,7 @@ const App = () => {
               >
                 {/* <a href={exchange?.coinrankingUrl}>{exchange?.name}</a> */}
                 <p>
-                  <span className='text-info'> {exchange?.name} </span>
+                  <span className='text-info'> {exchange?.name}</span>
                   is a blockchain ecosystem comprising a cryptocurrency
                   exchange, startup incubator, startup investor, and coin
                   information provider.{" "}

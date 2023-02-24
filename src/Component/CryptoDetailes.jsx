@@ -22,7 +22,7 @@ const CryptoDetailes = () => {
   const { coinId } = useParams();
   // console.log(coinId);
   const { data, isFetching } = useGetDetailsQuery({ coinId });
-  const [timeperiod, setTimeperiod] = useState("1h");
+  const [timeperiod, setTimeperiod] = useState("5y");
   const { data: coinHistory } = useGetHistoryCryptoQuery({
     coinId,
     timeperiod,
@@ -140,7 +140,7 @@ const CryptoDetailes = () => {
         </div>
 
         <select
-          defaultValue=''
+          defaultValue='5y'
           className='select-timeperiod rounded'
           placeholder='Select Timeperiod'
           onChange={(value) => setTimeperiod(value.target.value)}
@@ -209,7 +209,12 @@ const CryptoDetailes = () => {
             {cryptoDetails?.links?.map((link, i) => (
               <div className='coin-link' key={i}>
                 <h5 className='link-name'>{link?.type}</h5>
-                <a href={link?.url} target='_blank' rel='noreferrer'>
+                <a
+                  href={link?.url}
+                  target='_blank'
+                  className='text-info'
+                  rel='noreferrer'
+                >
                   {link?.name}
                 </a>
               </div>

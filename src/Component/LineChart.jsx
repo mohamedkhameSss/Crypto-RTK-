@@ -118,15 +118,15 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
       <div className='container row chart-header'>
         <h2 className='chart-title text-white'>{coinName} Price Chart</h2>
         <div className='col price-container'>
-          <h5 className='price-change text-white'>
+          <div className='price-change text-white'>
             Change: {coinHistory?.data?.change}%
-          </h5>
+          </div>
           <h5 className='current-price text-white'>
             Current {coinName} Price: $ {currentPrice}
           </h5>
         </div>
       </div>
-      <div className='me-3'>
+      <div className=''>
         <Line options={options} data={data} />
       </div>
     </>
