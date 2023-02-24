@@ -14,7 +14,7 @@ const News = ({ simplified }) => {
   // newsCategory: "cryptocurrency",
   //   count: 10,
   // });
-  console.log(news);
+  // console.log(data);
   if (isFetching) {
     return (
       <div className='vh-100 text-center m-5'>
@@ -38,25 +38,20 @@ const News = ({ simplified }) => {
             <div className='col-sm-6 col-lg-4 col-xl-3' key={index}>
               <Link
                 target={"_blank"}
-                className=' '
+                className='text-decoration-none'
                 to={`${item?.url}`}
                 rel=' noreferrer'
               >
                 <Card
-                  style={{
-                    minHeight: 250,
-                    backgroundColor: "black",
-                    // backgroundImage: "url(../public/asset/d.png)",
-                    color: "white",
-                    borderColor: "#1677ff",
-                    borderWidth: "4px",
-                  }}
-                  title={`${
+                  style={{ minHeight: 250 }}
+                  title={` ${
                     item?.title ? item?.title.slice(0, 20) : item?.date
                   }`}
+                  // extra={
+                  // }
                   hoverable
-                  headStyle={{ color: "#1677ff" }}
                 >
+                  {/* <h6>{item?.date?.split("2023")[0]}</h6> */}
                   <p>
                     {item?.description
                       ? item?.description?.slice(0, 150)

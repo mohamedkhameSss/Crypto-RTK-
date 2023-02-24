@@ -60,7 +60,7 @@ const HomePage = () => {
               Top 10 Crypto Currencies in the world
             </h4>
 
-            <Link className=' text-danger me-5 mt-5' to={"./cryptoCurrencies"}>
+            <Link className=' text-info me-5 mt-5' to={"./cryptoCurrencies"}>
               Show more
             </Link>
           </div>
@@ -70,7 +70,7 @@ const HomePage = () => {
               Latest Crypto Currencies News
             </h4>
 
-            <Link className='text-danger  me-5' to={"./news"}>
+            <Link className='text-info  me-5' to={"./news"}>
               Show more
             </Link>
           </div>

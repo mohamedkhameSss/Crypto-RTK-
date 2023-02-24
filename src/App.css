@@ -24,11 +24,7 @@ a:hover{
   display: flex;
   overflow: hidden;
   /* background-color: #030303; */
-  /* background-color:  #c06cf5; */
-  background-image: url(../public/asset/d.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color:  #c06cf5;
   /* background-color:  #a851df; */
 
 }
@@ -38,7 +34,6 @@ a:hover{
   background-color:  #001529;
   /* background-color:  #001529; */
 }
-
 
 .main{
   flex: 0.8;
@@ -109,9 +104,6 @@ a:hover{
   .app{
       flex-direction: column;
       overflow: hidden;
-  }
-  .exFont{
-    font-size: .5rem;
   }
 
   .navbar{
@@ -337,8 +329,8 @@ a:hover{
   width: 25%;
   margin: auto;
   height: 3px;
-  background-color: #0078FF;
-  /* background-color: var(--bgPrimary); */
+  /* background-color: #0078FF; */
+  background-color: var(--bgPrimary);
   position: absolute;
   left: 0;
   border-radius: 50%;
