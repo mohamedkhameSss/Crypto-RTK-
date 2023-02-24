@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Crypto-RTK-/static/css/main.d1df04a4.css",
+    "main.css": "/Crypto-RTK-/static/css/main.9991fff2.css",
     "main.js": "/Crypto-RTK-/static/js/main.f4ebc16d.js",
     "static/js/787.9cb4529b.chunk.js": "/Crypto-RTK-/static/js/787.9cb4529b.chunk.js",
     "index.html": "/Crypto-RTK-/index.html",
-    "main.d1df04a4.css.map": "/Crypto-RTK-/static/css/main.d1df04a4.css.map",
+    "main.9991fff2.css.map": "/Crypto-RTK-/static/css/main.9991fff2.css.map",
     "main.f4ebc16d.js.map": "/Crypto-RTK-/static/js/main.f4ebc16d.js.map",
     "787.9cb4529b.chunk.js.map": "/Crypto-RTK-/static/js/787.9cb4529b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1df04a4.css",
+    "static/css/main.9991fff2.css",
     "static/js/main.f4ebc16d.js"
   ]
 }
