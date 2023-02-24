@@ -35,6 +35,7 @@ a:hover{
   /* background-color:  #001529; */
 }
 
+
 .main{
   flex: 0.8;
   width: 100%;
@@ -104,6 +105,9 @@ a:hover{
   .app{
       flex-direction: column;
       overflow: hidden;
+  }
+  .exFont{
+    font-size: .5rem;
   }
 
   .navbar{
