@@ -34,13 +34,13 @@ const App = () => {
         <>
           <div className='row justify-content-between text-white mb-2 me-2'>
             <div className=' w-50'>
-              <span className='ms-5'>Currency</span>
+              <span className='ms-5 exFont'>Currency</span>
               {/* <span></span> */}
             </div>
 
-            <div className='col'>24hVolume</div>
-            <div className='col'>numberOfMarkets</div>
-            <div className='col'>marketShare</div>
+            <div className='col exFont'>24hVolume</div>
+            <div className='col exFont'>numberOfMarkets</div>
+            <div className='col exFont'>marketShare</div>
           </div>
           {exchanges?.map((exchange) => (
             <Collapse
@@ -76,17 +76,21 @@ const App = () => {
                 // key={}
               >
                 {/* <a href={exchange?.coinrankingUrl}>{exchange?.name}</a> */}
-                <p className='text-primary'>
-                  {exchange?.name}
+                <p>
+                  <span className='text-info'> {exchange?.name} </span>
                   is a blockchain ecosystem comprising a cryptocurrency
                   exchange, startup incubator, startup investor, and coin
-                  information provider. {exchange?.name} is a highly popular
-                  exchange and allows its users to trade hundreds of
-                  {exchange?.name} exchange requires KYC (know-your-customer),
-                  which is the process that banks gather identifying data and
-                  contact information from current and potential customers, to
-                  prevent fraud. {exchange?.name} is capable of processing
-                  millions orders per second and supports many cryptocurrencies.
+                  information provider.{" "}
+                  <span className='text-info'> {exchange?.name}</span> is a
+                  highly popular exchange and allows its users to trade hundreds
+                  of
+                  <span className='text-info'> {exchange?.name}</span> exchange
+                  requires KYC (know-your-customer), which is the process that
+                  banks gather identifying data and contact information from
+                  current and potential customers, to prevent fraud.{" "}
+                  <span className='text-info'> {exchange?.name}</span> is
+                  capable of processing millions orders per second and supports
+                  many cryptocurrencies.
                 </p>
               </Panel>
               {/* <Panel header='This is panel header 2' key='2'>

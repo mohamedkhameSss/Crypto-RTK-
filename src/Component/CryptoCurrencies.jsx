@@ -64,6 +64,14 @@ const CryptoCurrencies = ({ simplified }) => {
                 >
                   <Card
                     title={`${item?.rank}.${item?.name} `}
+                    style={{
+                      minHeight: 250,
+                      backgroundColor: "#001529",
+                      color: "white",
+                      borderColor: "#1677ff",
+                      borderWidth: "4px",
+                    }}
+                    headStyle={{ color: "#1677ff" }}
                     extra={
                       <img
                         className='crypto-image'

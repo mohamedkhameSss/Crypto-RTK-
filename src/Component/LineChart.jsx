@@ -39,7 +39,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
 
   const coinPrice = [];
   const coinTimestamp = [];
-  for (let i = 0; i < coinHistory?.data?.history?.length; i += 10) {
+  for (let i = 0; i < coinHistory?.data?.history?.length; i += 15) {
     let covNum = coinHistory?.data?.history[i]?.timestamp;
     let input = new Date(covNum).toLocaleTimeString();
     // .split("/")[];
@@ -101,7 +101,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
         Filler: true,
         label: ` ${coinName}`,
         data: labels?.map(() => faker.datatype.number({ coinPrice })),
-        borderColor: "rgb(255, 255, 255)",
+        borderColor: "001529",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
       // {
@@ -116,12 +116,12 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
   return (
     <>
       <div className='container row chart-header'>
-        <h2 className='chart-title text-white'>{coinName} Price Chart</h2>
+        <h2 className='chart-title '>{coinName} Price Chart</h2>
         <div className='col price-container'>
-          <h5 className='price-change text-white'>
+          <h5 className='price-change '>
             Change: {coinHistory?.data?.change}%
           </h5>
-          <h5 className='current-price text-white'>
+          <h5 className='current-price '>
             Current {coinName} Price: $ {currentPrice}
           </h5>
         </div>

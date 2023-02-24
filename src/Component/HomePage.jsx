@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div className='container'>
       {/* <h1 className=' text-center  m-5 '>CryptoCurrency</h1> */}
-      <h3 className=' w-25 ms-3 my-5  underline-x '>Global Crypto Static</h3>
+      <h3 className=' w-50 ms-3 my-5  '>Global Crypto Static</h3>
       {isFetching ? (
         <div className='vh-100 text-center m-5'>
           <Spin size='large' />
