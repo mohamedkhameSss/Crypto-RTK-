@@ -1,9 +1,5 @@
 import "./App.css";
-import {
-  RouterProvider,
-  createHashRouter,
-  createBrowserRouter,
-} from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 
 import {
   HomePage,
@@ -17,7 +13,7 @@ import {
 // import faker from "faker";
 
 function App() {
-  let routes = createBrowserRouter([
+  let routes = createHashRouter([
     {
       path: "/",
       element: <MasterLayout />,
