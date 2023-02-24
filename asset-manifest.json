@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CryptoApp/static/css/main.d1df04a4.css",
-    "main.js": "/CryptoApp/static/js/main.99d5ab42.js",
-    "static/js/787.9cb4529b.chunk.js": "/CryptoApp/static/js/787.9cb4529b.chunk.js",
-    "index.html": "/CryptoApp/index.html",
-    "main.d1df04a4.css.map": "/CryptoApp/static/css/main.d1df04a4.css.map",
-    "main.99d5ab42.js.map": "/CryptoApp/static/js/main.99d5ab42.js.map",
-    "787.9cb4529b.chunk.js.map": "/CryptoApp/static/js/787.9cb4529b.chunk.js.map"
+    "main.css": "/Crypto-RTK-/static/css/main.d1df04a4.css",
+    "main.js": "/Crypto-RTK-/static/js/main.d0e9017f.js",
+    "static/js/787.9cb4529b.chunk.js": "/Crypto-RTK-/static/js/787.9cb4529b.chunk.js",
+    "index.html": "/Crypto-RTK-/index.html",
+    "main.d1df04a4.css.map": "/Crypto-RTK-/static/css/main.d1df04a4.css.map",
+    "main.d0e9017f.js.map": "/Crypto-RTK-/static/js/main.d0e9017f.js.map",
+    "787.9cb4529b.chunk.js.map": "/Crypto-RTK-/static/js/787.9cb4529b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d1df04a4.css",
-    "static/js/main.99d5ab42.js"
+    "static/js/main.d0e9017f.js"
   ]
 }
