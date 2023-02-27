@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGetDetailsQuery, useGetHistoryCryptoQuery } from "../app/cryptoApi";
 import millify from "millify";
@@ -12,7 +12,6 @@ import {
   CheckOutlined,
   NumberOutlined,
   ThunderboltOutlined,
-  Loading3QuartersOutlined,
 } from "@ant-design/icons";
 import HTMLReactParser from "html-react-parser";
 import LineChart from "./LineChart";
@@ -20,23 +19,21 @@ import { Spin } from "antd";
 
 const CryptoDetailes = () => {
   const { coinId } = useParams();
-  // console.log(coinId);
   const { data, isFetching } = useGetDetailsQuery({ coinId });
   const [timeperiod, setTimeperiod] = useState("5y");
   const { data: coinHistory } = useGetHistoryCryptoQuery({
     coinId,
     timeperiod,
   });
-  // console.log(coinHistory);
-  const cryptoDetails = data?.data?.coin;
-  console.log(cryptoDetails);
-  const [coin, setCoin] = useState(data?.data?.coin);
-  // useEffect(() => {
-  //   console.log(timeperiod);
-  // }, [timeperiod]);
 
+  const cryptoDetails = data?.data?.coin;
   const time = ["1h", "3h", "12h", "24h", "7d", "30d", "3m", "1y", "3y", "5y"];
-  if (isFetching) return <Loading3QuartersOutlined />;
+  if (isFetching)
+    return (
+      <div className='vh-100 text-center m-5'>
+        <Spin size='large' />
+      </div>
+    );
   const stats = [
     {
       title: "Price to USD",
@@ -53,8 +50,7 @@ const CryptoDetailes = () => {
     {
       title: "24h Volume",
       value: `$ ${
-        cryptoDetails["24" + "hVolume"] &&
-        millify(cryptoDetails["24" + "hVolume"])
+        cryptoDetails["24hVolume"] && millify(cryptoDetails["24hVolume"])
       }`,
       icon: <ThunderboltOutlined />,
       id: 15,
@@ -121,7 +117,6 @@ const CryptoDetailes = () => {
   if (isFetching) {
     return (
       <div className='vh-100 text-center m-5'>
-        {/* <Loading3QuartersOutlined /> */}
         <Spin size='large' />
       </div>
     );

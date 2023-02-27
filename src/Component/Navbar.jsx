@@ -1,56 +1,12 @@
-// import React from "react";
-// import { Typography, Avatar, Menu } from "antd";
-// import { Link } from "react-router-dom";
-// import {
-//   HomeOutlined,
-//   MoneyCollectOutlined,
-//   BulbOutlined,
-//   FundOutlined,
-// } from "@ant-design/icons";
-// import icon from "../Component/images/cryptocurrency.png";
-// const Navbar = () => {
-//   return (
-//     <div className='nav-container'>
-//       <div className='logo-container'>
-//         <Avatar src={icon} size='large' />
-//         <Typography.Title level={2} className='logo'>
-//
-//         </Typography.Title>
-//       </div>
-//       <Menu theme='dark'>
-//         <Menu.Item  key={1}>
-//           <Link className='text-decoration-none' to='/'>
-//             Home
-//           </Link>
-//         </Menu.Item>
-//         <Menu.Item icon= key={2}>
-
-//         </Menu.Item>
-//         <Menu.Item icon= key={3}>
-
-//         </Menu.Item>
-//         <Menu.Item icon= key={4}>
-
-//         </Menu.Item>
-//       </Menu>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
 import {
-  AppstoreOutlined,
   BulbOutlined,
-  ContainerOutlined,
   FundOutlined,
   HomeOutlined,
-  MenuFoldOutlined,
   MoneyCollectOutlined,
-  PieChartOutlined,
 } from "@ant-design/icons";
 import { Button, Menu } from "antd";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -92,9 +48,7 @@ const items = [
   ),
 ];
 const App = () => {
-  const d = useParams();
-  console.log(d);
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };

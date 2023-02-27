@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { faker } from "@faker-js/faker";
 
 import {
@@ -9,13 +9,10 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Filler,
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-import { Col, Row, Typography } from "antd";
-// const { Title } = Typography;
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -27,25 +24,11 @@ ChartJS.register(
 );
 
 const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
-  // const [coinHis, setcoinHis] = useState(coinHistory);
-  // const [coinStamp, setcoinStamp] = useState([])
-  // useEffect(()=>{
-  //   setcoinStamp(coinHis.map(coin => coin.history[i]?.timestamp))
-
-  // },[timeperiod])
-  // useEffect(() => {
-  //   setcoinHis(coinHistory);
-  // }, [timeperiod]);
-
   const coinPrice = [];
   const coinTimestamp = [];
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 15) {
     let covNum = coinHistory?.data?.history[i]?.timestamp;
     let input = new Date(covNum).toLocaleTimeString();
-    // .split("/")[];
-    // .toLocaleTimeString("en-US");
-
-    // timeperiod === "5y" ? (input = input[2] -= 1) : (input = input);
 
     coinTimestamp.push(input);
   }
@@ -53,7 +36,6 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinPrice.push(coinHistory?.data?.history[i]?.price);
   }
-  // console.log(coinTimestamp);
   const options = {
     responsive: true,
     plugins: {
@@ -126,7 +108,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timeperiod }) => {
           </h5>
         </div>
       </div>
-      <div className=''>
+      <div>
         <Line options={options} data={data} />
       </div>
     </>

@@ -1,7 +1,6 @@
-import { Loading3QuartersOutlined } from "@ant-design/icons";
-import { Col, Row, Spin, Statistic, Typography } from "antd";
+import { Spin, Statistic } from "antd";
 import millify from "millify";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 import { useGetcryptoQuery } from "../app/cryptoApi";
@@ -11,18 +10,17 @@ import News from "./News";
 
 const HomePage = () => {
   const { data, isFetching } = useGetcryptoQuery({ count: 10 });
-  // console.log(data);
+
   return (
     <div className='container'>
-      {/* <h1 className=' text-center  m-5 '>CryptoCurrency</h1> */}
-      <h3 className=' w-50 ms-3 my-5  '>Global Crypto Static</h3>
+      <h3 className='  ms-3 my-5  '>Global Crypto Static</h3>
       {isFetching ? (
         <div className='vh-100 text-center m-5'>
           <Spin size='large' />
         </div>
       ) : (
         <>
-          <div className='row whiteImpo container underline-x'>
+          <div className='row  container underline-x'>
             <div className='col-sm-6'>
               <Statistic
                 title={<h6 className=' text-info'>Total CryptoCurrency</h6>}
@@ -55,7 +53,7 @@ const HomePage = () => {
               />
             </div>
           </div>
-          <div className='home-heading-container my-3  '>
+          <div className='home-heading-container my-5  '>
             <h4 className='home-title   ms-5 mt-5'>
               Top 10 Crypto Currencies in the world
             </h4>

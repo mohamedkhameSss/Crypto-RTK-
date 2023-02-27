@@ -1,22 +1,11 @@
-import { Loading3QuartersOutlined } from "@ant-design/icons";
 import { Collapse, Spin } from "antd";
 import millify from "millify";
 import { useGetExchangesQuery } from "../app/cryptoApi";
 const { Panel } = Collapse;
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+
 const App = () => {
   const { data, isFetching, isLoading } = useGetExchangesQuery();
-
-  // const {}
   const exchanges = data?.data?.exchanges;
-  console.log(exchanges);
-  // console.log(stats);
-  const descArray = [];
-  const dayChhange = "24hVolume";
   const onChange = (key) => {
     console.log(key);
   };
@@ -27,16 +16,12 @@ const App = () => {
       </div>
       {isFetching || isLoading ? (
         <div className='vh-100 text-center m-5'>
-          {/* <Loading3QuartersOutlined /> */}
           <Spin size='large' />
         </div>
       ) : (
         <>
           <div className='row justify-content-between text-white m-2 no-wrap me-2'>
-            <div className='col-6 exFont'>
-              Currency
-              {/* <span></span> */}
-            </div>
+            <div className='col-6 exFont'>Currency</div>
 
             <div className='col-2 exFont'>24hVolume</div>
             <div className='col-2 exFont'>Markets</div>
@@ -64,7 +49,7 @@ const App = () => {
                       </div>
 
                       <div className='col '>
-                        {millify(exchange?.["24" + "hVolume"])}
+                        {millify(exchange?.["24hVolume"])}
                       </div>
                       <div className='col'>
                         {millify(exchange?.numberOfMarkets)}
@@ -73,9 +58,7 @@ const App = () => {
                     </div>
                   </>
                 }
-                // key={}
               >
-                {/* <a href={exchange?.coinrankingUrl}>{exchange?.name}</a> */}
                 <p>
                   <span className='text-info'> {exchange?.name}</span>
                   is a blockchain ecosystem comprising a cryptocurrency
@@ -93,12 +76,6 @@ const App = () => {
                   many cryptocurrencies.
                 </p>
               </Panel>
-              {/* <Panel header='This is panel header 2' key='2'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='This is panel header 3' key='3'>
-              <p>{text}</p> */}
-              {/* </Panel> */}
             </Collapse>
           ))}
         </>

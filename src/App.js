@@ -10,7 +10,6 @@ import {
   News,
   CryptoDetailes,
 } from "./Component";
-// import faker from "faker";
 
 function App() {
   let routes = createHashRouter([

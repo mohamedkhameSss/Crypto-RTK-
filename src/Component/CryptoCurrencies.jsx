@@ -1,5 +1,4 @@
-import { Loading3QuartersOutlined } from "@ant-design/icons";
-import { Card, Col, Row, Spin } from "antd";
+import { Card, Spin } from "antd";
 import millify from "millify";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,14 +9,7 @@ const CryptoCurrencies = ({ simplified }) => {
   const { data, isFetching, isLoading } = useGetcryptoQuery({ count });
   const [cryptos, setCryptos] = useState([]);
   const [searchFactor, setSearchFactor] = useState("");
-  console.log(data);
-  console.log(simplified);
-  // useEffect(() => {
-  //   setCryptos(data?.data?.coins);
-  // }, [data]);
   useEffect(() => {
-    // setCryptos(data?.data?.coins);
-
     const filtereData = data?.data?.coins?.filter((item) =>
       item?.name?.toLowerCase().includes(searchFactor.toLowerCase())
     );
@@ -50,7 +42,6 @@ const CryptoCurrencies = ({ simplified }) => {
       )}
       {isFetching || isLoading ? (
         <div className='vh-100 text-center m-5'>
-          {/* <Loading3QuartersOutlined /> */}
           <Spin />
         </div>
       ) : (
@@ -79,13 +70,6 @@ const CryptoCurrencies = ({ simplified }) => {
                   </Card>
                 </Link>
               </div>
-              // <div key={item?.uuid} className='crypto-card'>
-              //   <div className='crypto-card-content'>
-              //     <h3 className='crypto-card-name'>{item?.name}</h3>
-              //     <p className='crypto-card-symbol'>{item?.symbol}</p>
-              //     <p className='crypto-card-price'>{item?.price}</p>
-              //   </div>
-              // </div>
             ))}
           </div>
         </div>
